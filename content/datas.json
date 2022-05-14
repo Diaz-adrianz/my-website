@@ -1,0 +1,210 @@
+[
+    {
+        "text": {
+            "bio": { 
+                "in": "Halo! Perkenalkan nama saya Diaz Adriansyah, panggil saja dias :D. Kelahiran Bandung, 19 Desember 2005 dari keluarga yang sederhana. Saat ini seorang pelajar SMKN 4 Bandung di bidang Teknologi Komputer dan Informasi. Antusias terhadap hal-hal berbau teknologi. Komputer menjadi senjata utama saya.<br><br>Tertarik pada dunia programming, khususnya bidang Web Development yang saya konsisten dan ambisius menekuninya. Prinsip simple, reusable dan maintainability menjadi fokus utama saya dalam membangun web atau suatu program. Selain itu, saya gemar menggambar dan desain. Tujuannya sebagai bekal ilmu dalam membangun karir saya.",
+                "en": "Hello! Introduce my name is Diaz Adriansyah, just call me Dias :D. Born in Bandung on December 19, 2005 from a simple familya. Students of SMKN 4 Bandung in the field of Computer and Information Technology. Enthusiastic about things related to technology. Now, the computer became my main weapon.<br><br>Interested in programming, especially web development, which I am consistent and ambitious about pursuing. The principles of simplicity, reusable, and maintainability are my main focus in building a web or program. On the other hand, I like drawing and design. The goal is to provide knowledge in building my career."
+            }
+        },
+        "crsl": {
+            "mypic": [
+                { "file": "crsl/grizz.jpg", "title": "grizzly"},
+                { "file": "crsl/panda.jpg", "title": "Panda"},
+                { "file": "crsl/iceb.jpg", "title": "Ice bear"}
+            ],
+            "top": [
+                { "file": "crsl/rumah3dd.png", "title": "Rumah blender3d"},
+                { "file": "crsl/poster17.png", "title": "Kemerdekaan Indonesia"},
+                { "file": "crsl/senkuu.jpg", "title": "Dr. stone"}
+            ]
+        },
+        "pics": {
+            "certif": [
+                {"img": "fcc_responsive_web_design.png",
+                "title": "Responsive Web Design (fcc)",
+                "link": "#",
+                "p":{"in": "Sertifikat kelas online mandiri mengenai dasar frontend pada pengembangan web.",
+                    "en":"Independent online course certificate on basic frontend web development."}
+                },
+                {"img": "eduwork_freeclass_webdev.jpg",
+                "title": "Basic Web Development",
+                "link": "#",
+                "p":{"in":"Sertifikat kelas online mengenai dasar frontend dan dasar backend pada pengembangan web.",
+                    "en": "Online class certificate on frontend foundation and backend foundation in web development."} 
+                }
+            ],
+            "projects": [
+                {"img": "projects/katalog.png",
+                "title": "Catalogue Website",
+                "link": "#",
+                "p":{"in": "Website katalog pakaian dilengkapi fitur search, filter, sort dan like dengan metode CRUD php melalui halaman admin.",
+                    "en": "A clothing catalog website that is equipped with search, filter, sort, like features using CRUD php method through the admin page."}
+                },
+                {"img": "projects/moviesearch.png",
+                "title": "Movie Search",
+                "link": "https://moviesearch-diz.netlify.app",
+                "p":{"in": "Website pencarian data film berdasarkan omdbapi dengan menggunakan metode asynchronus fetch javascript.",
+                    "en":"Movie data search website based on omdbapi using asynchronus fetch javascript method."}
+                },
+                {"img": "projects/binjai.png",
+                "title": "Binjai 100",
+                "link": "https://diaz-adrianz.github.io/binjai-100-v2/",
+                "p":{"in": "Game klik-klik javascript sedeerhana untuk mencapai 100 hit secepatnya dengan tujuan merobohkan pohon pisang.",
+                    "en": "Simple javascript click-click game to reach 100 hits as fast as possible with the aim of knocking down banana tree."}
+                },
+                {"img": "projects/noteapp.png",
+                "title": "Temp note",
+                "link": "#",
+                "p":{"in": "Penerapan metode CRUD pada javascript.",
+                    "en": "Implementaion of CRUD method on javascript."}
+                }
+            ]
+        },
+        "img": {
+            "smkn4": "smkn4bdg.jpg",
+            "smpn30": "smpn30bdg.jpg",
+            "sdn219": "sdn219bdg.jpg",
+            "frontend": "frontend.svg",
+            "backend": "backend.svg"
+        },
+        "boxes": {
+            "hobbies": [
+                {"icon": "fas fa-laptop",
+                "color": "var(--white)",
+                "percentage": "",
+                "p": "Computer"
+                },
+                {"icon": "fas fa-pen-ruler",
+                "color": "var(--white)",
+                "percentage": "",
+                "p": "Drawing"
+                },
+                {"icon": "fas fa-music",
+                "color": "var(--white)",
+                "percentage": "",
+                "p": "Music"
+                },
+                {"icon": "fas fa-pen-nib",
+                "color": "var(--white)",
+                "percentage": "",
+                "p": "Design"
+                }
+            ],
+            "skills": [
+                {"icon": "fab fa-html5",
+                "color": "#e5542f",
+                "percentage": "<span>90%</span>",
+                "p": "Html5"
+                },
+                {"icon": "fab fa-css3-alt",
+                "color": "#0077bc",
+                "percentage": "<span>82%</span>",
+                "p": "CSS3"
+                },
+                {"icon": "fab fa-js",
+                "color": "#f0db4f",
+                "percentage": "<span>65%</span>",
+                "p": "Javascript"
+                },
+                {"icon": "fab fa-php",
+                "color": "#8993be",
+                "percentage": "<span>44%</span>",
+                "p": "php"
+                },
+                {"icon": "fas fa-database",
+                "color": "#f29111",
+                "percentage": "<span>32%</span>",
+                "p": "Sql"
+                },
+                {"icon": "fab fa-bootstrap",
+                "color": "#563d7c",
+                "percentage": "<span>67%</span>",
+                "p": "Bootstrap"
+                }
+            ],
+            "tools": [
+                {"icon": "fas fa-code",
+                "color": "#0078d7",
+                "percentage": "<span>55%</span>",
+                "p": "Vscode"
+                },
+                {"icon": "fab fa-figma",
+                "color": "#3cabdb",
+                "percentage": "<span>40%</span>",
+                "p": "Figma"
+                },
+                {"icon": "fab fa-github",
+                "color": "var(--white)",
+                "percentage": "<span>63%</span>",
+                "p": "Github"
+                }
+            ]
+        },
+        "people": {
+            "author": [
+                {"img": "haha.jpg",
+                "nama": "Diaz",
+                "role": "Author",
+                "p":{"in" :"Bagaimana menururtmu? menarik? menginspirasi? atau yang lain? Tuangkan pendapatmu di kolom kirim pesan. Jika tertarik untuk berkolaborasi bisa kirim pesan melalui email atau media sosial pribadi.<br><a href='mailto:diazadrianz191205@gmail.com'>diazadrianz191205@gmail.com</a>",
+                    "en":"What do you think? interesting? Inspire? or something else? Put your opinion in the message column. If you are interested in collaborating, you can send a message via email or personal social media.<br><a href='mailto:diazadrianz191205@gmail.com'>diazadrianz191205@gmail.com</a>"},
+                "type": ""
+                } 
+            ],
+            "reviews": [
+                {"img": "person.svg",
+                "nama": "Wahyu",
+                "role": "CEO",
+                "p":{"in" :"Umumnya baik dengan detail dan memeriksa pekerjaan secara menyeluruh, tetapi ada satu atau dua kesalahan kecil dalam pekerjaan yang disajikan pada periode saat ini. Telah terbukti kemampuannya untuk menghasilkan ide, rencana, produk, atau metode yang orisinal dan kreatif, meskipun tidak selalu praktis, sesuai dengan kebutuhan organisasi, atau berhasil.",
+                    "en":"Generally good with detail and checks work thoroughly, but there have been one or two minor errors in work presented in the current period Has proven ability to produce creative, original ideas, plans, products or methods,even if they’re not always practical, in line with organization needs, or successful."},
+                "type": ""
+                },
+                {"img": "person.svg",
+                "nama": "Ken",
+                "role": "Freelance",
+                "p":{"in" :"Mengikuti instruksi dengan baik, tetapi cenderung terlalu literal, dan bisa hilang kecuali ada pedoman yang tegas. Atau terkadang mungkin tidak cukup berhati-hati untuk memeriksa instruksi sebelum memulai.",
+                    "en":"Follows instructions well, but has a tendency to be too literal, and can be lost unless there are firm guidelines. Or sometimes may not take sufficient care to check the instructions before starting."},
+                "type": "chat-right"
+                }
+            ]
+        },
+        "card": {
+            "journey": [
+                {"title":{"in": "Fokus dalam pengembangan web",
+                        "en": "Focus on web development"},
+                "date": "Now",
+                "p":{"in": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nunc justo, rhoncus ornare nulla at, feugiat vehicula arcu. Nam mattis leo diam, non placerat mi imperdiet eget. Nam pretium et lectus tempor venenatis. Maecenas eu.",
+                    "en": ".ue saneceaM .sitanenev ropmet sutcel te muiterp maN .tege teidrepmi im tarecalp non ,maid oel sittam maN .ucra alucihev taiguef ,ta allun eranro sucnohr ,otsuj cnun cnuN .tile gnicsipida rutetcesnoc ,tema tis rolod muspi meroL"
+                    }
+                },
+                {"title":{"in": "Belajar pemrograman dasar",
+                        "en": "Learn basic programming"},
+                "date": "2021",
+                "p":{"in": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque iaculis nulla, ac sollicitudin quam consequat ut. Ut imperdiet ligula vitae dignissim efficitur. Vestibulum massa massa, facilisis sed eros in.",
+                    "en": ".ni sore des sisilicaf ,assam assam mulubitseV .ruticiffe missingid eativ alugil teidrepmi tU .tu tauqesnoc mauq niduticillos ca ,allun silucai euqsirelecs deS .tile gnicsipida rutetcesnoc ,tema tis rolod muspi meroL"
+                    }
+                },
+                {"title":{"in": "Organisasi",
+                        "en": "Organizations"},
+                "date": "2018 - 2021",
+                "p":{"in": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nunc justo, rhoncus ornare nulla at, feugiat vehicula arcu. Nam mattis leo diam, non placerat mi imperdiet eget. Nam pretium et lectus tempor venenatis. Maecenas eu.",
+                    "en": ".ue saneceaM .sitanenev ropmet sutcel te muiterp maN .tege teidrepmi im tarecalp non ,maid oel sittam maN .ucra alucihev taiguef ,ta allun eranro sucnohr ,otsuj cnun cnuN .tile gnicsipida rutetcesnoc ,tema tis rolod muspi meroL"
+                    }
+                },
+                {"title":{"in": "Selalu tiga besar",
+                        "en": "Alway get top three"},
+                "date": "2012 - 2018",
+                "p":{"in": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque iaculis nulla, ac sollicitudin quam consequat ut. Ut imperdiet ligula vitae dignissim efficitur. Vestibulum massa massa, facilisis sed eros in.",
+                    "en": ".ni sore des sisilicaf ,assam assam mulubitseV .ruticiffe missingid eativ alugil teidrepmi tU .tu tauqesnoc mauq niduticillos ca ,allun silucai euqsirelecs deS .tile gnicsipida rutetcesnoc ,tema tis rolod muspi meroL"
+                    }
+                }, 
+                {"title":{"in": "Bandung, Jawa Barat, Indonesia",
+                        "en": "Bandung, West Java, Indonesia"},
+                "date": "2005",
+                "p":{"in": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nunc justo, rhoncus ornare nulla at, feugiat vehicula arcu. Nam mattis leo diam, non placerat mi imperdiet eget. Nam pretium et lectus tempor venenatis. Maecenas eu.",
+                    "en": ".ue saneceaM .sitanenev ropmet sutcel te muiterp maN .tege teidrepmi im tarecalp non ,maid oel sittam maN .ucra alucihev taiguef ,ta allun eranro sucnohr ,otsuj cnun cnuN .tile gnicsipida rutetcesnoc ,tema tis rolod muspi meroL"
+                    }
+                }
+            ]
+        }
+    }
+]

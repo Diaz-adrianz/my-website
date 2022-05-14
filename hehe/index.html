@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="custom/style.css">
+    <link rel="stylesheet" href="node_modules/material-icons/iconfont/material-icons.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+
+
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- HEADER  -->
+    <header>
+        <button type="button" class="btn toggle tooltip" data-title="Ubah tema" data-plus="0" onclick="ui_mode(this)">
+            <span class="iconize"><i class="material-icons">light_mode</i></span>
+        </button>
+
+        <p id="greet">Good morning</p>
+
+        <ul class="medsos fade" aria-hidden="true">
+            <li class="tooltip" data-title="Facebook" data-plus="0">
+                <a href="" class="link fab fa-facebook"></a>
+            </li>
+            <li class="tooltip" data-title="Instagram" data-plus="0">
+                <a href="" class="link fab fa-instagram"></a>
+            </li>
+            <li class="tooltip" data-title="Github" data-plus="0">
+                <a href="" class="link fab fa-github"></a>
+            </li>
+            <li class="tooltip" data-title="Linkedin" data-plus="0">
+                <a href="" class="link fab fa-linkedin"></a>
+            </li>
+            <li class="tooltip" data-title="Twitter" data-plus="0">
+                <a href="" class="link fab fa-twitter"></a>
+            </li>
+        </ul>
+    </header>
+
+    <!-- NAVIGATION  -->
+    <nav>
+        <button type="button" class="btn underlined active">Home</button>
+        <button type="button" class="btn underlined">Profile</button>
+        <button type="button" class="btn underlined">Service</button>
+        <button type="button" class="btn underlined">Journey</button>
+        <button type="button" class="btn underlined">Projects</button>
+        <button type="button" class="btn underlined">Contact</button>
+    </nav>
+
+
+    <!-- MAIN  -->
+    <main> 
+        <div class="pages">
+
+            <!-- HOME PAGE -->
+            <section class="page focus" id="home">
+                <div class="content">
+                    <figure class="tooltip" data-title="Halo bang">
+                        <img src="img/haha.jpg" alt="">
+                    </figure>
+                    <div>
+
+                        <h1>Diaz Adriansyah</h1>
+                        <p>Web Developer</p>
+                        <ul class="medsos">
+                            <li class="tooltip" data-title="Facebook">
+                                <a href="" class="link fab fa-facebook"></a>
+                            </li>
+                            <li class="tooltip" data-title="Instagram">
+                                <a href="" class="link fab fa-instagram"></a>
+                            </li>
+                            <li class="tooltip" data-title="Github">
+                                <a href="" class="link fab fa-github"></a>
+                            </li>
+                            <li class="tooltip" data-title="Linkedin">
+                                <a href="" class="link fab fa-linkedin"></a>
+                            </li>
+                            <li class="tooltip" data-title="Twitter">
+                                <a href="" class="link fab fa-twitter"></a>
+                            </li>
+                        </ul>
+                        <button class="btn btn-p">Hire Me</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- PROFILE PAGE  -->
+            <section class="page" id="profile">
+                <div class="gradient"></div>
+                <div class="backdrop fade" data-on="off"></div>
+
+                <div class="flexing spy">
+
+                    <div class="side">
+                        <figure>
+                            <img src="img/thumb.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="content">
+
+                        <!-- MY BIO  -->
+                        <section id="bio" class="focus">
+                            <h3>Bio</h3>
+                            <p class="need-data" data-type="text" data-content="bio" data-parent="profile">
+                                Halo! Perkenalkan nama saya Diaz Adriansyah, panggil saja dias :D. Kelahiran Bandung, 19 Desember 2005
+                                dari keluarga yang sederhana. Saat ini seorang pelajar SMKN 4 Bandung di bidang Teknologi Komputer dan Informasi.
+                                Antusias terhadap hal-hal berbau teknologi. Komputer menjadi senjata utama saya.
+                                <br><br>
+                                Tertarik pada dunia programming, khususnya bidang Web Development yang saya konsisten dan ambisius menekuninya.
+                                Prinsip simple, reusable dan maintainability menjadi fokus utama saya dalam membangun web atau suatu program. 
+                                Selain itu, saya gemar menggambar dan desain dan aktif menjadi Content Creator.
+                                Tujuannya sebagai bekal ilmu dalam membangun karir saya.
+                            </p>
+
+                            <div class="crsl" id="pic">
+                                <div class="crsl-in">
+                                    <div  class="need-data" data-content="mypic" data-type="crsl" style="transform: translateX(0px);">
+                                        <div>
+                                            <figure class="see-img tooltip" data-content="thumb.png" data-title="Photo gwejh" data-parent="profile">
+                                                <img src="img/thumb.png" alt="">
+                                            </figure>
+                                        </div>
+                                        <div>
+                                            <figure class="see-img tooltip" data-title="Photo gwejh yang kedua">
+                                                <img src="img/thumb.png" alt="">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="crsl-nav">
+                                    <div class="gradient"></div>
+                                    <button type="button" data-nav="next" data-target="pic" class="btn material-icons" onclick="crsl(this)">chevron_right</button>
+                                    <button type="button" data-nav="prev" data-target="pic" class="btn material-icons" onclick="crsl(this)">chevron_left</button>
+                                    <span class="crsl-meter" data-meter="pictures">1/7</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- MY EDUCATION  -->
+                        <section id="edu">
+                            <h3>Education</h3>
+                            <div class="cards">
+                                <div class="card">
+                                    <figure>
+                                        <img class="need-data" data-content="smkn4" data-type="img" src="img/thumb.png"  alt="">
+                                    </figure>
+                                    <div class="card-body">
+                                        <h4>SMKN 4 Bandung</h4>
+                                        <span>2021 - sekarang</span>
+                                        <p>
+                                            Bidang jurusan Teknologi Komputer dan Informasi.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <figure>
+                                        <img class="need-data" data-content="smpn30" data-type="img" src="img/thumb.png" alt="">
+                                    </figure>
+                                    <div class="card-body">
+                                        <h4>SMPN 30 Bandung</h4>
+                                        <span>2018 - 2021</span>
+                                        <p>
+                                            -    
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <figure>
+                                        <img class="need-data" data-content="sdn219" data-type="img" src="img/thumb.png" alt="">
+                                    </figure>
+                                    <div class="card-body">
+                                        <h4>SDN 219 Bandung</h4>
+                                        <span>2012 - 2018</span>
+                                        <p>
+                                            -    
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- MY HOBBIES  -->
+                        <section id="hobbies">
+                            <h3>Hobbies</h3>
+
+                            <div class="grid">
+                                <figure class="item"></figure>
+                                <figure class="item"></figure>
+                                <figure class="item"></figure>
+                                <figure class="item"></figure>
+                            </div>
+                        </section>
+
+                        <!-- MY CERTIFICATES  -->
+                        <section id="certificates">
+                            <h3>Certificates</h3>
+                            <div class="grid can-see need-data" data-content="certif" data-type="pics">
+                                <div class="item see-img" onclick="see_img( this )" data-parent="profile">
+                                    <figure>
+                                        <img src="img/fcc_responsive_web_design.png" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>Lorem ipsum</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, nostrum. Dolor vero recusandae natus vitae?</p>
+                                    </div>
+                                </div>
+                                <div class="item see-img" onclick="see_img( this )" data-parent="profile">
+                                    <figure>
+                                        <img src="img/eduwork_freeclass_webdev.jpg" alt="">
+                                    </figure>
+                                    <div>
+                                        <h3>Lorem ipsum</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, nostrum. Dolor vero recusandae natus vitae?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- SERVICE PAGE  -->
+            <section class="page" id="service">
+                <div class="gradient"></div>
+
+                <div class="flexing spy">
+                    <div class="side">
+                        <figure>
+                            <img src="img/thumb.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="content">
+
+                        <!-- WHAT I DO FOR SERVICE  -->
+                        <section id="ido" class="focus">
+                            <h3>Ready for</h3>
+                            <div class="cards">
+                                <div class="card">
+                                    <figure>
+                                        <img src="img/thumb.png" alt="">
+                                    </figure>
+                                    <div class="card-body">
+                                        <h4>Frontend web developer</h4>
+                                        <p>
+                                            React, Vue, Bootstrap 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <figure>
+                                        <img src="img/thumb.png" alt="">
+                                    </figure>
+                                    <div class="card-body">
+                                        <h4>Backend Developer</h4>
+                                        <p>
+                                            Laravel, Nodejs, Python
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- MY SKILLS  -->
+                        <section id="skill">
+                            <h3>Programming</h3>
+
+                            <div class="grid">
+                                <div class="item">
+                                    <figure>
+                                        <i class="fab fa-html5" style="color: #e5542f;"></i>
+                                        <span>70%</span>
+                                    </figure>
+                                    <p>HTML5</p>
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <i class="fab fa-css3-alt" style="color: #0077bc;"></i>
+                                        <span>100%</span>
+                                    </figure>
+                                    <p>CSS3</p>
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <i class="fab fa-js" style="color: #e97b30;"></i>
+                                        <span>10%</span>
+                                    </figure>
+                                    <p>Javascript</p>
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <i class="fab fa-php " style="color: #77d4f2;"></i>
+                                        <span>40%</span>
+                                    </figure>
+                                    <p>Php</p>
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <i class="fas fa-database" style="color: #346e9b;"></i>
+                                        <span>30%</span>
+                                    </figure>
+                                    <p>Sql</p>
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <i class="fab fa-bootstrap" style="color: #346e9b;"></i>
+                                        <span>50%</span>
+                                    </figure>
+                                    <p>Bootstrap</p>
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <i class="fab fa-node-js" style="color: #346e9b;"></i>
+                                        <span>30%</span>
+                                    </figure>
+                                    <p>Nodejs</p>
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <i class="fab fa-laravel" style="color: #346e9b;"></i>
+                                        <span>30%</span>
+                                    </figure>
+                                    <p>Laravel</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- MY TOOLS -->
+                        <section id="tools">
+                            <h3>Tools</h3>
+
+                            <div class="grid">
+                                <div class="item">
+                                    <figure>
+                                        <i class="fab fa-figma" style="color: #e5542f;"></i>
+                                        <span>70%</span>
+                                    </figure>
+                                    <p>Figma</p>
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <i class="fab fa-figma" style="color: #0077bc;"></i>
+                                        <span>100%</span>
+                                    </figure>
+                                    <p>Figma</p>
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <i class="fab fa-git" style="color: #e97b30;"></i>
+                                        <span>40%</span>
+                                    </figure>
+                                    <p>Git</p>
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <i class="fab fa-github " style="color: #77d4f2;"></i>
+                                        <span>78%</span>
+                                    </figure>
+                                    <p>Github</p>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- JOURNEY PAGE  -->
+            <section class="page" id="journey">
+                <div class="gradient"></div>
+
+                <div class="flexing spy">
+                    <div class="side">
+                        <figure>
+                            <img src="img/thumb.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="content">
+
+                        <section class="card-j focus">
+                            <span>Now</span>
+                            <h3>Study at bandung</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deleniti fugiat dolorem harum totam qui voluptatibus veniam accusantium voluptatem! Minus!
+                            </p>
+                            <button class="btn">More</button>
+                        </section>
+
+                        <section class="card-j">
+                            <span>Now</span>
+                            <h3>Study at bandung</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deleniti fugiat dolorem harum totam qui voluptatibus veniam accusantium voluptatem! Minus!
+                            </p>
+                            <button class="btn">More</button>
+                        </section>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROOJECTS PAGE  -->
+            <section class="page" id="projects">
+                <div class="gradient"></div>
+
+                <div class="backdrop fade" data-on="off"></div>
+                <div class="flexing" data-scroll="true">
+                    <div class="content">
+    
+                        <div class="crsl" id="top">
+                            <div class="crsl-in">
+                                <div  style="transform: translateX(0px);">
+                                    <div>
+                                        <figure><img src="img/thumb.png" title="Ini photo Gwejh" alt=""></figure>
+                                    </div>
+                                    <div>
+                                        <figure><img src="img/thumb.png" title="Ini photo Gwejh" alt=""></figure>
+                                    </div>
+                                    <div>
+                                        <figure><img src="img/thumb.png" title="Ini photo Gwejh" alt=""></figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="crsl-nav">
+                                <div class="gradient"></div>
+                                <button type="button" data-nav="next" data-target="top" class="btn material-icons" onclick="crsl(this)">chevron_right</button>
+                                <button type="button" data-nav="prev" data-target="top" class="btn material-icons" onclick="crsl(this)">chevron_left</button>
+                                <span class="crsl-meter" data-meter="topWorks">1/7</span>
+                            </div>
+                        </div>
+                        <div class="grid can-see">
+                            <div class="item see-img" onclick="see_img( this )" data-parent="projects">
+                                <figure>
+                                    <img src="img/night.jpg" alt="">
+                                </figure>
+                                <div>
+                                    <h3>Lorem ipsum</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, nostrum. Dolor vero recusandae natus vitae?</p>
+                                </div>
+                            </div>
+                            <div class="item see-img" onclick="see_img( this )" data-parent="projects">
+                                <figure>
+                                    <img src="img/my-bg.jpg" alt="">
+                                </figure>
+                                <div>
+                                    <h3>Lorem ipsum</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, nostrum. Dolor vero recusandae natus vitae?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT PAGE  -->
+            <section class="page" id="contact">
+                <div class="gradient"></div>
+
+                <div class="flexing">
+                    <div class="side">
+                        <form action="">
+                                <h3>Send a message</h3>
+                                <div class="input-group">
+                                    <input class="f-input" type="text" name="nama" id="" placeholder="awok" required>
+                                    <span>Name</span>
+                                </div>
+                                <div class="input-group">
+                                    <input class="f-input" type="email" name="email" id="" placeholder="example@gmail.com" required>
+                                    <span>Email</span>
+                                </div>
+                                <div class="input-group">
+                                    <textarea class="f-input" value="" name="comment" placeholder="great!" id="" required></textarea>
+                                    <span>What do you think?</span>
+                                </div>
+                                <div class="input-btn">
+                                    <button type="reset" id="form-reset-btn" class="btn">
+                                        <span class="material-icons">restart_alt</span>
+                                        Reset
+                                    </button>
+                                    <button type="submit" id="form-send-btn" class="btn btn-p disabled" aria-disabled="true">
+                                        <span class="material-icons">send</span>
+                                        Send
+                                    </button>
+                                </div>
+                        </form>
+                    </div>
+                    <div class="content">
+                        <div class="chat-me">
+                            <div class="chat">
+                                <figure></figure>
+                                <div>
+                                    <h3>Diaz | author</h3>
+                                    <div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae placeat saepe omnis eaque ex nesciunt odio voluptate excepturi laudantium nemo!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="spacing"></div>
+                            </div>
+                        </div>
+
+                        <hr>
+                        
+                        <div class="chat-reviews">
+                            <div class="chat chat-right">
+                                <figure></figure>
+                                <div>
+                                    <h3>Diaz | author</h3>
+                                    <div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae placeat saepe omnis eaque ex nesciunt odio voluptate excepturi laudantium nemo!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="spacing"></div>
+                            </div>
+
+                            <div class="chat">
+                                <figure></figure>
+                                <div>
+                                    <h3>Diaz | author</h3>
+                                    <div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae placeat saepe omnis eaque ex nesciunt odio voluptate excepturi laudantium nemo!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="spacing"></div>
+                            </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+
+
+    <script src="custom/fungsi.js"></script>
+    <script src="https://kit.fontawesome.com/bc418b707a.js" crossorigin="anonymous"></script>
+</body>
+</html>

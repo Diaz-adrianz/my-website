@@ -1,0 +1,17 @@
+[
+    {"icon": "fab fa-node-js",
+    "color": "#6ba603",
+    "percentage": "<span>soon</span>",
+    "p": "Nodejs"
+    },
+    {"icon": "fab fa-laravel",
+    "color": "#f05340",
+    "percentage": "<span>soon</span>",
+    "p": "Laravel"
+    },
+    {"icon": "fab fa-git",
+    "color": "#f1502f",
+    "percentage": "<span>soon</span>",
+    "p": "Git"
+    }
+]
