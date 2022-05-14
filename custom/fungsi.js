@@ -345,7 +345,7 @@ form.onsubmit = Event => {
 
     if ( clientt["chance"] == 0 ) {
         let err_message = [{
-            'img': "haha.jpg",
+            'img': "me.jpg",
             'nama': "Diaz",
             'role': "author",
             'p': clientt['error'],
@@ -356,7 +356,7 @@ form.onsubmit = Event => {
         form_reset()
     } else {
         let this_client = [{
-            'img': "thumb.png",
+            'img': "person.svg",
             'nama': clientt['nama'],
             'role': clientt['role'],
             'p': clientt['pesan'],
