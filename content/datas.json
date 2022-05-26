@@ -120,7 +120,12 @@
                 "color": "#563d7c",
                 "percentage": "<span>67%</span>",
                 "p": "Bootstrap"
-                }
+                },
+                {"icon": "fab fa-node-js",
+    "color": "#6ba603",
+    "percentage": "<span>9%</span>",
+    "p": "Nodejs"
+    }
             ],
             "tools": [
                 {"icon": "fas fa-code",
