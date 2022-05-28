@@ -393,6 +393,7 @@ main.pages::-webkit-scrollbar {
 }
 .page::after,
 .page::before {
+  pointer-events: none;
   content: "";
   position: absolute;
   z-index: 40;
