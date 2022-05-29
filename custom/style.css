@@ -419,7 +419,7 @@ main.pages::-webkit-scrollbar {
   position: relative;
   overflow: hidden;
   opacity: 0.3;
-  transition: opacity 1s;
+  transition: opacity .7s;
   border-left: 2px dotted var(--secondary);
   border-right: 2px dotted var(--secondary);
 }
