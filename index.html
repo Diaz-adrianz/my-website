@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- MY CSS  -->
-    <link rel="stylesheet" href="custom/style.css" />
+    <link rel="stylesheet" href="css/atom.css" />
+    <link rel="stylesheet" href="css/anatomy.css" />
+    <link rel="stylesheet" href="css/component.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 
     <!-- ICON GOOGLE CDN  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -15,6 +18,18 @@
     <title>Diaz profil page</title>
   </head>
   <body>
+
+    <!-- LIGHTBOX  -->
+    <div id="light-box" class="fade">
+      <button class="btn" onclick="cls_img(this)"><i class="material-icons">close</i></button>
+      <figure>
+        <img src="img/eduwork_freeclass_webdev.jpg" alt="">
+        <a class="btn btn-p" href="#">eduwork_freeclass_webdev</a>
+      </figure>
+      <div class="img-list">
+      </div>
+    </div>
+
     <!-- HEADER  -->
     <header>
       <!-- setting / custom this web  -->
@@ -84,6 +99,7 @@
 
     <!-- MAIN  -->
     <main class="pages">
+
       <!-- HOME PAGE -->
       <section class="page focus loaded" id="home">
         <div class="load"></div>
@@ -880,7 +896,9 @@
 
     <!-- MY JS  -->
     <script src="custom/fungsi.js"></script>
+
     <!-- ICON FONTAWSOME CDN  -->
     <script src="https://kit.fontawesome.com/bc418b707a.js" crossorigin="anonymous"></script>
+
   </body>
 </html>
