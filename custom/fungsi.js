@@ -255,7 +255,7 @@ function crsl(el) {
   let item = items[current - 1].getBoundingClientRect().width;
   let range = parseFloat(slider.style.transform.slice(11, -2));
 
-  console.log(item);
+  // console.log(item);
   if (el.dataset.nav == "next") {
     if (range > item * (items.length - 1) * -1) {
       slider.style.transform = `translateX(${range - item}px)`;
@@ -282,44 +282,30 @@ function card_expand(btn) {
 }
 
 // OPEN / VIEW MODAL IMAGE
-function see_img(event, el) {
-  event.stopPropagation();
+const lbox = document.getElementById("light-box")
+const lboxImg = document.querySelector("#light-box > figure img")
+const lboxList = document.querySelector("#light-box .img-list")
 
-  let parent = el.dataset.parent;
-  let scrolling = document.querySelector(`#${parent} .flexing`);
-  let bd = document.querySelector(`#${parent} .backdrop`);
+function see_img( event, el ) {
+  const imgs = document.querySelectorAll(".see-img")
 
-  el.classList.contains("focus") ? closeImg(el, bd, scrolling) : openImg(el, bd, scrolling);
+  lbox.classList.add("show")
+  lboxImg.setAttribute("src", el.getAttribute("src"))
+  lboxImg.nextElementSibling.setAttribute("href", el.dataset.link)
+  lboxImg.nextElementSibling.textContent = el.dataset.title
 
-  bd.onclick = (Event) => {
-    closeImg(el, bd, scrolling);
-    return;
-  };
+  lboxList.innerHTML = ""
+  imgs.forEach( img => {
+    console.log(el.getAttribute("src") == img.getAttribute("src"))
+    lboxList.innerHTML += `
+    <figure class="${ img.getAttribute('src') == el.getAttribute('src') ? 'focus' : '' }">
+      <img src="${img.getAttribute('src')}" alt="${img.dataset.title}" data-link="${img.dataset.link}" data-title="${img.dataset.title}" onclick="see_img( event, this )" />
+    </figure>
+    `
+  })
 }
-
-function closeImg(el, backdrop, scrolling) {
-  el.classList.remove("focus");
-  el.style.left = "0";
-  el.style.top = "0";
-
-  scrolling.dataset.scroll = "true";
-  fadeOut(backdrop);
-}
-
-function openImg(el, backdrop, scrolling) {
-  el.classList.add("focus");
-
-  backdrop.classList.add("show");
-  scrolling.dataset.scroll = "false";
-
-  setTimeout(() => {
-    let rect = el.getBoundingClientRect();
-
-    el.style.cssText = `
-        left: ${getView()[0] / 2 - rect.width / 2 - rect.left}px; 
-        top: ${getView()[1] / 2 - rect.height / 2 - rect.top}px;
-        `;
-  }, 300);
+function cls_img ( el ) {
+  fadeOut(el.parentElement)
 }
 
 // FORM CONTROL
@@ -550,8 +536,8 @@ function crsl_template(items) {
   items.forEach((item) => {
     val += `
         <div>
-            <figure class="see-img tooltip" data-title="${item.title}">
-                <img src="img/${item.file}" alt="">
+            <figure class="tooltip" data-title="${item.title}">
+                <img class="see-img" src="img/${item.file}" alt="${item.title}" data-link="${item.link}" data-title="${item.title}" onclick="see_img( event, this )">
             </figure>
         </div>
         `;
@@ -563,28 +549,12 @@ function crsl_template(items) {
 function pics_template(items, parent, key) {
   let val = "";
 
-  let i = 0;
   items.forEach((item) => {
-    let p = this_lang == "in" ? item.p.in : item.p.en;
-    lang[`${key}-${i}`] = this_lang == "in" ? item.p.en : item.p.in;
-
     val += `
-        <div class="item see-img" onclick="see_img( event, this )" data-parent="${parent}">
-            <figure>
-                <img src="img/${item.img}" alt="${item.img}">
-            </figure>
-            <div>
-                <a href="${item.link}" target="_blank">
-                    <i class="material-icons">link</i>
-                    <h3>${item.title}</h3>
-                </a>
-                <p class="lang" data-content="${key}-${i}">
-                    ${p}
-                </p>
-            </div>
-        </div>
+        <figure class="item">
+            <img class="see-img" src="img/${item.img}" alt="${item.img}" data-link="${item.link}" data-title="${item.title}" onclick="see_img( event, this )">
+        </figure>
         `;
-    i++;
   });
   return val;
 }
