@@ -1,0 +1,128 @@
+/*
+--------------------------
+========== MEDIA QUERIES
+-------------------------- 
+*/
+
+@media only screen and (min-width: 1400px) {
+    main {
+      width: 100%;
+    }
+    .pages > .page {
+      width: 100%;
+    }
+  }
+  /* < 1280px  */
+  @media only screen and (max-width: 1280px) {
+    .box-info-wrap {
+      padding: 0 10px;
+      gap: 0;
+    }
+  }
+  
+  /* > 992px  */
+  @media only screen and (max-width: 1024px) {
+    #profile .crsl {
+      max-width: 450px;
+    }
+  }
+  
+  /* < 992px  */
+  @media only screen and (max-width: 992px) {
+    .chat figure {
+      min-width: 50px;
+      max-width: 50px;
+      height: 50px;
+    }
+    .page .flexing {
+      flex-direction: column;
+      gap: 2em;
+    }
+    .page .side {
+      min-height: 50vh;
+      height: 50vh !important;
+      flex: auto;
+      position: relative;
+    }
+    .side > * {
+      margin: 0 auto;
+    }
+    .side figure {
+      width: 85%;
+      margin: auto;
+      height: 85%;
+    }
+  
+    #contact .side > * {
+      margin: auto !important;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    header {
+      padding: 0.5em 1em;
+    }
+    .pages > .page {
+      padding: 3em 0.5em 4.5em 1em;
+    }
+    .page .flexing,
+    #projects .content {
+      padding-right: 0.5em;
+    }
+    .content > section.focus {
+      padding-left: 1em;
+    }
+  }
+  
+  /* < 600px  */
+  @media only screen and (max-width: 600px) {
+    * {
+      font-size: 14px;
+    }
+    nav {
+      left: 42%;
+    }
+    main .pages {
+      transition: transform 1s ease-in-out;
+    }
+    .page .content {
+      padding: 0 0 10em 0;
+    }
+    .card figure {
+      width: 80px;
+      height: 80px;
+    }
+  
+    #home .content {
+      flex-direction: column;
+      gap: 1em;
+    }
+    #home .content > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #home h1 {
+      font-size: 2em;
+    }
+    #home p {
+      font-size: 1em;
+    }
+    #home figure {
+      width: 150px;
+      height: 150px;
+    }
+    .chat figure {
+      min-width: 40px;
+      max-width: 40px;
+      height: 40px;
+    }
+    .chat .spacing {
+      min-width: 40px;
+    }
+  }
+  
+  @media only screen and (max-width: 390px) {
+    * {
+      font-size: 12px;
+    }
+  }

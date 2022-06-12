@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+}
+:root {
+  --max-view: 1500px;
+  --layout-items: calc(100% / 6);
+  --primary: #1b2223;
+  --white: #e5e5e5;
+  --black: #222;
+  --secondary: #3a4f50;
+  --accent: #0ef6cc;
+  --surface: #e1e1e1;
+  --silver: #a0a0a0;
+  --red: #f32013;
+  --black-2: #000;
+
+  --glass: 34, 34, 34;
+  --primary-rgb: 27, 34, 35;
+  --silver-rgba: 160, 160, 170;
+  --accent-rgb: 14, 246, 204;
+  --red-rgb: 243, 29, 18;
+  --white-rgb: 247, 247, 247;
+  --black-rgb: 33, 33, 33;
+  --black-rgb-2: 0, 0, 0;
+  --fs: 14px;
+}
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--secondary #212121);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--secondary, #393e46);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent, #fd7014);
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  max-width: var(--max-view);
+  transition: 0;
+  color: var(--white);
+  background-color: var(--primary);
+  overflow-x: hidden;
+  position: relative;
+  margin: auto;
+}
+body.light {
+  --primary: #f8f9fa;
+  --black: #e5e5e5;
+  --white: #212529;
+  --silver: #858e97;
+  --accent: #ff6047;
+  --surface: #e1e1e1;
+  --secondary: #e6e6e6;
+
+  --primary-rgb: 248, 249, 250;
+  --accent-rgb: 255, 96, 71;
+}
+
+/* MICRO COMPONENTS ------------
+*/
+.d-0 {
+  display: none !important;
+}
+.iconize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+hr {
+  margin: 2em 0;
+  border-color: var(--silver);
+}
+h1 {
+  font-size: 2em;
+}
+.link {
+  font-size: inherit;
+  text-decoration: none;
+  color: var(--silver);
+  transition: 0.2s;
+}
+.link:hover {
+  color: var(--accent);
+}
+.btn {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5em 1.5em;
+  border-radius: 0.2em;
+  transition: 0.15s;
+  color: var(--silver);
+}
+body.light .btn {
+  font-weight: 600;
+}
+.btn.btn-p {
+  background-color: var(--accent);
+  color: var(--primary);
+  font-weight: bold;
+  border-radius: 50rem;
+}
+.btn.btn-p:hover {
+  color: var(--primary);
+  opacity: 0.75;
+}
+.btn.disabled {
+  pointer-events: none;
+  background-color: var(--secondary);
+  color: var(--silver);
+  cursor: not-allowed;
+}
+.btn:hover {
+  color: var(--accent);
+}
+.btn:active {
+  transform: scale(0.9);
+}
+.btn.btn-p:focus {
+  box-shadow: 0 0 5px 2px rgba(var(--accent-rgb), 0.5);
+}
+ul {
+  list-style: none;
+}
+figure {
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 0.3em;
+}
+figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+body.light p {
+  /* text-shadow: 0 1px 3px rgba(0, 0, 0, .15) !important; */
+  font-weight: 600 !important;
+}
+body.light span {
+  font-weight: 600 !important;
+}
+p {
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5em;
+}
+.btn.toggle {
+  padding: 0;
+  border-radius: 50rem;
+  min-width: 52px;
+  max-width: 52px;
+  padding: 3px;
+  border: 1px solid #e5e5e5;
+}
+.btn.toggle.on {
+  border-color: var(--accent);
+}
+.btn.toggle.on span {
+  background-color: var(--accent);
+  margin-left: auto;
+}
+.btn.toggle.on i {
+  color: #222;
+}
+.btn.toggle span {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #e5e5e5;
+}
+.btn.toggle i {
+  font-size: 1em !important;
+  color: var(--secondary);
+}
+.underlined {
+  position: relative;
+}
+.underlined::after {
+  content: "";
+  height: 3px;
+  border-radius: 3px;
+  position: absolute;
+  top: 100%;
+  background-color: var(--accent);
+  transition: width 0.2s;
+}
+.listing li {
+  position: relative;
+  padding-left: 1em;
+  margin-bottom: 0.3em;
+}
+.listing li::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--accent);
+}
+.tooltip {
+  position: relative;
+  --left: 50%;
+  --top: 100%;
+  --content: "ini tooltip";
+  --animation-name: fade;
+}
+.tooltip::after {
+  transition: 0.2s;
+  position: absolute;
+  top: var(--top);
+  content: var(--content);
+  left: var(--left);
+  background: rgba(var(--glass), 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px) !important;
+  border: 1px solid rgba(var(--silver-rgba), 0.1);
+  padding: 3px 1em;
+  z-index: 9999;
+  color: #e5e5e5;
+  display: none;
+  pointer-events: none;
+  white-space: nowrap;
+  border-radius: 0.3em;
+  animation: var(--animation-name) 0.3s forwards;
+}
+.tooltip.show::after {
+  display: block;
+}
+
+/*
+--------------------------
+========== ANIMATION
+-------------------------- 
+*/
+.fade {
+  animation: fade 0.4s forwards;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes load {
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 70%;
+    left: 100%;
+  }
+}
+@keyframes zoom {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}

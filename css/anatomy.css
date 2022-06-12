@@ -1,0 +1,555 @@
+/* HEADER --------------- 
+*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em 2em;
+}
+header > p {
+  padding: 0 1em;
+  margin-right: auto;
+  margin-bottom: 0;
+  border-left: 1px solid var(--white);
+}
+header > ul {
+  gap: 1em;
+  display: none;
+}
+header > ul.show {
+  display: flex;
+}
+
+#setting {
+  z-index: 199;
+  position: relative;
+  overflow: visible;
+}
+#setting > .btn {
+  position: relative;
+  top: 2px;
+}
+#setting ul {
+  position: absolute;
+  padding: 0.75em 1em;
+  display: none;
+  top: 140%;
+  left: 0;
+  border-radius: 0.3em;
+  background: rgba(var(--glass), 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px) !important;
+  border: 1px solid rgba(var(--silver-rgba), 0.3);
+}
+#setting ul.show {
+  display: block;
+}
+#setting ul li {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 0 0 1em;
+}
+#setting p {
+  margin: 0;
+  font-weight: normal !important;
+  color: #e5e5e5;
+}
+#setting .open-this {
+  padding: 0;
+  transition: 0.2s;
+}
+#setting .open-this.focus {
+  transform: rotate(90deg);
+}
+#setting .open-this.focus::after {
+  transform: rotate(-90deg);
+}
+#setting ul li:last-child {
+  padding: 0;
+}
+#setting ul li:last-child p {
+  margin: 0 !important;
+  white-space: nowrap;
+  font-size: 0.7em;
+  opacity: 0.8;
+}
+/* NAVIGATION ---------------- 
+*/
+nav {
+  position: absolute;
+  bottom: 0;
+  left: 46.5%;
+  /* width: 100%; */
+  padding: 0 0 1.75em;
+  display: flex;
+  gap: 2em;
+  z-index: 500;
+  align-items: flex-end;
+  transition: transform 0.65s linear;
+}
+nav > .btn {
+  font-size: 1.2em;
+  transition: 0.15s;
+  position: relative;
+  padding: 0;
+}
+nav > .btn::after {
+  width: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.5s;
+}
+nav > .active {
+  font-size: 1.8em;
+  color: var(--white) !important;
+}
+nav > .active::after {
+  width: 70%;
+}
+
+/* LAYOUT --------------- 
+*/
+main.pages {
+  width: 100vw;
+  max-width: var(--max-view);
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  position: relative;
+  scroll-behavior: smooth;
+  transition: none;
+}
+main.pages::-webkit-scrollbar {
+  display: none;
+}
+.page::after,
+.page::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  z-index: 40;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+.page::after {
+  bottom: 3em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(var(--primary-rgb, 0.25)), rgba(var(--primary-rgb, 0.5)), var(--primary));
+}
+.page::before {
+  top: 3em;
+  background-image: linear-gradient(var(--primary), rgba(var(--primary-rgb), 0.5), rgba(var(--primary-rgb), 0.25), rgba(0, 0, 0, 0));
+}
+
+.pages > .page {
+  padding: 4em 1em 4em 2em;
+  min-width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+  opacity: 0.3;
+  transition: opacity .7s;
+  border-left: 2px dotted var(--secondary);
+  border-right: 2px dotted var(--secondary);
+}
+.page.focus {
+  opacity: 1 !important;
+  border: none !important;
+}
+.page > .backdrop,
+.page > .load {
+  position: absolute;
+  width: 100%;
+  height: 110vh;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px) !important;
+}
+.page > .backdrop.show {
+  display: block;
+}
+.page > .load.show {
+  z-index: 99;
+  display: flex;
+  animation-delay: 2s;
+  animation-duration: 1s;
+  background-color: var(--primary);
+}
+.page > .load {
+  display: none;
+}
+.page > .load.show > div {
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 5em;
+}
+.load.show i {
+  font-size: 7em;
+  margin-bottom: 0.4em;
+  color: var(--white);
+}
+.load.show .in-load {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 3px;
+}
+.load.show .in-load div {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  left: -30%;
+  animation: load 0.8s ease-in-out infinite;
+  background-color: var(--accent);
+}
+.load .in-load div {
+  animation: none;
+}
+
+.page .flexing {
+  display: flex;
+  padding-right: 2em;
+  overflow: hidden auto;
+  height: 100%;
+  position: relative;
+}
+.page .side {
+  flex: 1;
+  position: sticky;
+  top: 0;
+  display: flex;
+}
+.side > * {
+  width: 100%;
+  max-height: 100%;
+  max-width: 400px !important;
+  margin: auto;
+}
+.side svg {
+  width: 100%;
+  height: 100%;
+}
+.side svg .svg-accent {
+  fill: var(--accent) !important;
+}
+
+.page .content {
+  flex: 1;
+  height: fit-content;
+  /* min-height: 100%; */
+  padding: 2em 3em 10em;
+}
+.page [data-scroll="false"] {
+  overflow-y: hidden !important;
+}
+.content > section {
+  margin-bottom: 4em;
+  transition: padding 0.4s;
+  transform-origin: 0 0;
+}
+.content > section * {
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.content > section.focus {
+  padding-left: 1.5em;
+  position: relative;
+}
+.content > section.focus::after {
+  content: "";
+  background-color: var(--accent);
+  height: 100%;
+  width: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+}
+.content > section.focus * {
+  pointer-events: visible;
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+.content > section h3 {
+  margin-bottom: 0.75em;
+  color: var(--accent);
+  font-size: 2em;
+}
+
+/* HOME PAGE ====== */
+#home .content * {
+  transition: 0.2s;
+}
+#home .content {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  height: 100%;
+  padding-bottom: 3em;
+}
+#home .content > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#home ul {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 1em 0;
+}
+#home h1 {
+  font-size: 3.4em;
+}
+#home p {
+  font-size: 1.3em;
+}
+#home figure {
+  width: 200px;
+  height: 200px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+}
+/* ABOUT page ======  */
+#profile #bio > p {
+  margin-bottom: 2em;
+}
+#profile .crsl {
+  max-width: 500px;
+  margin-left: auto;
+}
+
+/* SERVICE page ========  */
+#service .grid > .item {
+  display: flex;
+  background: none;
+  flex-direction: column;
+}
+#service .grid > .item figure {
+  flex: 1;
+  display: flex;
+}
+#service .card img {
+  object-fit: contain;
+}
+
+/* JOURNEY PAGE ======= */
+#journey .content > section {
+  margin-bottom: 1.5em;
+}
+
+/* PROJECTS PAGE ======== */
+#projects .flexing {
+  height: 100%;
+  overflow-y: auto;
+}
+#projects .content {
+  padding-right: 2em;
+  height: auto;
+}
+#projects .crsl {
+  margin-bottom: 3em;
+}
+#projects .grid {
+  gap: 0.3em;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* CONTACT PAGE  */
+#contact .flexing {
+  scroll-behavior: smooth;
+}
+#contact .side {
+  z-index: 10 !important;
+}
+form {
+  width: 100%;
+  transition: 0;
+  padding: 1em 0.8em;
+  margin: auto;
+  max-width: 400px;
+  background-color: var(--primary);
+}
+form h3 {
+  color: var(--accent);
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+form .input-btn {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2em;
+}
+form .input-btn .btn {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+form .input-group {
+  position: relative;
+  width: 100%;
+}
+.input-group span {
+  position: absolute;
+  top: 1em;
+  color: var(--white);
+  left: 0;
+  pointer-events: none;
+  transition: 0.2s;
+  border-radius: 0.3em 0.3em 0 0;
+}
+input::placeholder,
+input::-webkit-input-placeholder,
+textarea::placeholder,
+textarea::-webkit-input-placeholder {
+  opacity: 0;
+}
+input,
+textarea {
+  width: 100%;
+  position: relative;
+  padding: 1.1em 0 0.25em 0;
+  margin-bottom: 1em;
+  color: var(--white);
+  border: none;
+  border-bottom: 2px solid var(--secondary);
+  background: none !important;
+  background-image: none !important;
+}
+input:autofill,
+input:-webkit-autofill {
+  background-image: none !important;
+  background: none !important;
+  border-bottom: 5px solid var(--red);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  box-shadow: 0 0 0 50px var(--primary) inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: var(--white);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 5em;
+  max-height: 10em;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+input:focus ~ span,
+textarea:focus ~ span,
+input:valid ~ span,
+textarea:valid ~ span,
+input.invalid ~ span {
+  top: 0;
+  left: 0;
+  font-size: 0.8em;
+  border-bottom: none;
+  opacity: 0.7;
+}
+
+input.invalid {
+  border-color: var(--red);
+}
+
+.chats {
+  padding-bottom: 30em;
+}
+.chat {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+.chat.chat-right {
+  flex-direction: row-reverse;
+}
+.chat.chat-right h3 {
+  text-align: right;
+}
+.chat figure {
+  min-width: 60px;
+  max-width: 60px;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  border-radius: 50%;
+  background-color: var(--silver);
+}
+.chat .spacing {
+  min-width: 60px;
+}
+.chat h3 {
+  margin-bottom: 0.5em;
+  font-weight: normal;
+  color: var(--accent);
+}
+body.light .chat p {
+  text-shadow: none !important;
+}
+.chat > div > div {
+  position: relative;
+  border-radius: 0.3em;
+  max-width: 350px;
+  background-color: var(--secondary);
+  padding: 1em 0.75em;
+}
+body.light .chat > div > div {
+  border: 1px solid var(--silver);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+.chat a {
+  color: var(--accent);
+}
+.chat .status {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  overflow: hidden;
+}
+.chat .status > div {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  left: -30%;
+  animation: load 1.2s ease-in-out infinite;
+  background-color: var(--accent);
+}
+.chat .status.done > div {
+  animation: none;
+  width: 0;
+}
