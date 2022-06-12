@@ -8,55 +8,43 @@
         },
         "crsl": {
             "mypic": [
-                { "file": "crsl/grizz.jpg", "title": "grizzly"},
-                { "file": "crsl/panda.jpg", "title": "Panda"},
-                { "file": "crsl/iceb.jpg", "title": "Ice bear"}
+                { "file": "crsl/grizz.jpg", "title": "grizzly", "link": "#"},
+                { "file": "crsl/panda.jpg", "title": "Panda", "link": "#"},
+                { "file": "crsl/iceb.jpg", "title": "Ice bear", "link": "#"}
             ],
             "top": [
-                { "file": "crsl/rumah3dd.png", "title": "Rumah blender3d"},
-                { "file": "crsl/poster17.png", "title": "Kemerdekaan Indonesia"},
-                { "file": "crsl/senkuu.jpg", "title": "Dr. stone"}
+                { "file": "crsl/rumah3dd.png", "title": "Rumah blender3d", "link": "#"},
+                { "file": "crsl/poster17.png", "title": "Kemerdekaan Indonesia", "link": "#"},
+                { "file": "crsl/senkuu.jpg", "title": "Dr. stone", "link": "#"}
             ]
         },
         "pics": {
             "certif": [
                 {"img": "fcc_responsive_web_design.png",
                 "title": "Responsive Web Design (fcc)",
-                "link": "#",
-                "p":{"in": "Sertifikat kelas online mandiri mengenai dasar frontend pada pengembangan web.",
-                    "en":"Independent online course certificate on basic frontend web development."}
+                "link": "#"
                 },
                 {"img": "eduwork_freeclass_webdev.jpg",
                 "title": "Basic Web Development",
-                "link": "#",
-                "p":{"in":"Sertifikat kelas online mengenai dasar frontend dan dasar backend pada pengembangan web.",
-                    "en": "Online class certificate on frontend foundation and backend foundation in web development."} 
+                "link": "#"
                 }
             ],
             "projects": [
                 {"img": "projects/katalog.png",
                 "title": "Catalogue Website",
-                "link": "#",
-                "p":{"in": "Website katalog pakaian dilengkapi fitur search, filter, sort dan like dengan metode CRUD php melalui halaman admin.",
-                    "en": "A clothing catalog website that is equipped with search, filter, sort, like features using CRUD php method through the admin page."}
+                "link": "#"
                 },
                 {"img": "projects/moviesearch.png",
                 "title": "Movie Search",
-                "link": "https://moviesearch-diz.netlify.app",
-                "p":{"in": "Website pencarian data film berdasarkan omdbapi dengan menggunakan metode asynchronus fetch javascript.",
-                    "en":"Movie data search website based on omdbapi using asynchronus fetch javascript method."}
+                "link": "https://moviesearch-diz.netlify.app"
                 },
                 {"img": "projects/binjai.png",
                 "title": "Binjai 100",
-                "link": "https://diaz-adrianz.github.io/binjai-100-v2/",
-                "p":{"in": "Game klik-klik javascript sedeerhana untuk mencapai 100 hit secepatnya dengan tujuan merobohkan pohon pisang.",
-                    "en": "Simple javascript click-click game to reach 100 hits as fast as possible with the aim of knocking down banana tree."}
+                "link": "https://diaz-adrianz.github.io/binjai-100-v2/"
                 },
                 {"img": "projects/noteapp.png",
                 "title": "Temp note",
-                "link": "#",
-                "p":{"in": "Penerapan metode CRUD pada javascript.",
-                    "en": "Implementaion of CRUD method on javascript."}
+                "link": "#"
                 }
             ]
         },
